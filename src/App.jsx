@@ -16,9 +16,9 @@ import Footer from './components/Footer';
 import './index.css'; // Ensure Tailwind CSS is imported
 
 const App = () => {
-  // Dynamically set basename based on deployment environment
+  // Dynamically set basename for production deployment
   const basename =
-    import.meta.env.MODE === 'development' ? '/' : '/romany_portfolio/';
+    import.meta.env.MODE === 'development' ? '/' : '/romany_portfolio';
 
   return (
     <Router basename={basename}>
@@ -29,7 +29,7 @@ const App = () => {
         {/* Main Content */}
         <div className="flex-grow">
           <Routes>
-            {/* Home Routes - Display all sections together */}
+            {/* Home Routes */}
             <Route
               path="/"
               element={
@@ -42,6 +42,7 @@ const App = () => {
                 </div>
               }
             />
+            {/* Additional Route for Home */}
             <Route
               path="/home"
               element={
