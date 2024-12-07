@@ -29,22 +29,42 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Get form data
     const formData = new FormData(form.current);
     const user_name = formData.get("name");
     const user_email = formData.get("email");
     const user_phone = formData.get("phone");
     const user_reason = form.current.querySelector("#user_reason").selectedOptions[0].text;
-    const user_message = formData.get("#user_message");
+    const user_message = formData.get("message"); // Correctly getting the message
+
+    // Log form values to check if they are being captured correctly
+    console.log("Name: ", user_name);
+    console.log("Email: ", user_email);
+    console.log("Phone: ", user_phone);
+    console.log("Reason: ", user_reason);
+    console.log("Message: ", user_message); // Check if this is null or contains a value
+
+    // If any field is missing or message is empty, prevent form submission
+    if (!user_message || !user_name || !user_email || !user_phone || !user_reason) {
+      Swal.fire({
+        icon: "error",
+        title: "Form Incomplete",
+        text: "Please fill in all the fields before submitting.",
+        confirmButtonColor: "#e53935",
+      });
+      return;
+    }
 
     const templateParams = {
       user_name,
       user_email,
       user_phone,
       user_reason,
-      user_message, // Properly included in the template parameters
+      user_message,
       current_time: currentTime,
     };
 
+    // Send email via EmailJS
     emailjs
       .send("Romany_Rizieq", "Romany_RIzieq_Template", templateParams, "VfS4cEgX5DIbIBbA_")
       .then(
@@ -55,7 +75,7 @@ const Contact = () => {
             text: "Your message has been sent successfully.",
             confirmButtonColor: "#00bcd4",
           });
-          form.current.reset();
+          form.current.reset(); // Reset form after submission
         },
         (error) => {
           Swal.fire({
