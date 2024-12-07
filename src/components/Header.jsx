@@ -40,7 +40,7 @@ const Header = () => {
         {/* Logo and name on the left */}
         <div className="flex items-center justify-start space-x-2">
           <a
-            href="./Home.jsx"
+            href="/home"
             className="flex items-center space-x-2 p-2 rounded-full hover:bg-blue-500 hover:bg-gradient-to-r from-blue-500 to-purple-600 px-3 py-1 transition-all transform hover:scale-110 cursor-pointer"
           >
             {/* Logo image */}
@@ -73,7 +73,7 @@ const Header = () => {
           className={`${menuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row md:space-x-3 space-y-2 md:space-y-0 items-center absolute md:static top-16 md:top-auto right-0 bg-gray-800 md:bg-transparent w-full md:w-auto md:p-0 p-3`}
         >
           <NavLink
-            to="./Home.jsx"
+            to="/home"
             onClick={handleNavLinkClick}
             className={({ isActive }) =>
               `text-sm px-3 py-1 rounded-full flex items-center cursor-pointer transition-all ${isActive
@@ -87,7 +87,7 @@ const Header = () => {
           </NavLink>
 
           <NavLink
-            to="./About.jsx"
+            to="/about"
             onClick={handleNavLinkClick}
             className={({ isActive }) =>
               `text-sm px-3 py-1 rounded-full flex items-center cursor-pointer transition-all ${isActive
@@ -101,7 +101,7 @@ const Header = () => {
           </NavLink>
 
           <NavLink
-            to="./Experience.jsx"
+            to="/experience"
             onClick={handleNavLinkClick}
             className={({ isActive }) =>
               `text-sm px-3 py-1 rounded-full flex items-center cursor-pointer transition-all ${isActive
@@ -115,7 +115,7 @@ const Header = () => {
           </NavLink>
 
           <NavLink
-            to="./Projects.jsx"
+            to="/projects"
             onClick={handleNavLinkClick}
             className={({ isActive }) =>
               `text-sm px-3 py-1 rounded-full flex items-center cursor-pointer transition-all ${isActive
@@ -129,7 +129,7 @@ const Header = () => {
           </NavLink>
 
           <NavLink
-            to="./Contact.jsx"
+            to="/contact"
             onClick={handleNavLinkClick}
             className={({ isActive }) =>
               `text-sm px-3 py-1 rounded-full flex items-center cursor-pointer transition-all ${isActive
