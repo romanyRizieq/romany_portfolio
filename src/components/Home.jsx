@@ -11,7 +11,7 @@ const Home = () => {
       className="relative h-screen bg-cover bg-center bg-fixed text-white flex items-center justify-center"
       style={{
         backgroundImage:
-          `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${import.meta.env.BASE_URL}images/background_black.jpg)`, // Updated path
+          `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${import.meta.env.BASE_URL}images/background_black.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

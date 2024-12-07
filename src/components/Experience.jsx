@@ -12,7 +12,8 @@ const Experience = () => {
       id="experience"
       className="bg-cover bg-center bg-fixed py-20 px-6 text-center"
       style={{
-        backgroundImage: 'url(./images/background_black.jpg)', // Global background for the section
+        backgroundImage:
+        `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${import.meta.env.BASE_URL}images/background_black.jpg)`,
         backgroundSize: 'cover',  // Use 'cover' for the global background to fill the section
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -28,7 +29,7 @@ const Experience = () => {
         <div
           className="bg-cover p-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 relative"
           style={{
-            backgroundImage: 'url(./images/full-stack.jpg)', 
+            backgroundImage: `url(${import.meta.env.BASE_URL}images/full-stack.jpg)`, 
             backgroundSize: 'contain',  // Changed to 'contain' to show the image at its original size
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
@@ -52,7 +53,7 @@ const Experience = () => {
         <div
           className="bg-cover p-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 relative"
           style={{
-            backgroundImage: 'url(./images/uav.jpg)', 
+            backgroundImage: `url(${import.meta.env.BASE_URL}images/uav.jpg)`, 
             backgroundSize: 'contain',  // Changed to 'contain' to show the image at its original size
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
@@ -76,7 +77,7 @@ const Experience = () => {
         <div
           className="bg-cover p-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 relative"
           style={{
-            backgroundImage: 'url(./images/automotive.jpg)', 
+            backgroundImage: `url(${import.meta.env.BASE_URL}images/automotive.jpg)`, 
             backgroundSize: 'contain',  // Changed to 'contain' to show the image at its original size
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
@@ -99,7 +100,7 @@ const Experience = () => {
         <div
           className="bg-cover p-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 relative"
           style={{
-            backgroundImage: 'url(./images/aero1.jpeg)', 
+            backgroundImage: `url(${import.meta.env.BASE_URL}images/aero1.jpeg)`, 
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
@@ -122,7 +123,7 @@ const Experience = () => {
         <div
           className="bg-cover p-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 relative"
           style={{
-            backgroundImage: 'url(./images/Mechanical.jpg)', 
+            backgroundImage: `url(${import.meta.env.BASE_URL}images/Mechanical.jpg)`, 
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',

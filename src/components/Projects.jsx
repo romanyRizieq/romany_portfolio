@@ -11,21 +11,21 @@ const projectsData = [
     id: 1,
     title: "Graduation Project: Urban Air Mobility (eVTOL) ",
     description: "•	Designed and developed an electric vertical takeoff and landing (eVTOL) vehicle using SolidWorks, focusing on weight optimization and system integration.<br>•	Engineered an 8-motor propulsion system with battery, ESC, and control connections.<br>•	Configured ArduCopter for optimized flight performance and autonomous operation.",
-    imageUrl: "./images/uav.png", // Path to your project image
+    imageUrl: `url(${import.meta.env.BASE_URL}./images/uav.png`, // Path to your project image
     projectLink: "https://github.com/romanyRizieq/UAM-eVTOL-.git", // Link to GitHub or live demo
   },
   {
     id: 2,
     title: "Design of Axial Compressor and Turbine",
     description: "Designed an axial compressor using NACA 65 airfoil and a turbine with a desired Mach number, achieving 87% efficiency.",
-    imageUrl: "./images/turbine.png", // Path to your project image
+    imageUrl: `url(${import.meta.env.BASE_URL}/images/turbine.png`, // Path to your project image
     projectLink: "https://www.youtube.com/watch?v=6TIex4nyz7c", // Link to GitHub or live demo
   },
   {
     id: 3,
     title: "Embedded Systems for UAV Control",
     description: "•	Built UAV control systems using ATmega32 microcontrollers:	<br>•	Obstacle Avoidance System: Integrated ultrasonic sensors for navigation safety.<br>•	Stabilization System: Developed temperature-controlled fan mechanisms for UAV cooling.<br>•	Secure UAV Access System: Designed secure access protocols using keypads and LCDs.",
-    imageUrl: "./images/embedded-system-micro.jpg", // Path to your project image
+    imageUrl: `url(${import.meta.env.BASE_URL}/images/embedded-system-micro.jpg`, // Path to your project image
     projectLink: "https://github.com/romanyRizieq/Embedded-Projects.git", // Link to GitHub or live demo
   },
 ];
@@ -36,7 +36,8 @@ const Projects = () => {
       id="projects"
       className="bg-cover bg-center h-auto bg-fixed py-20 px-6 text-center"
       style={{
-        backgroundImage: 'url(./images/background_black.jpg)', // Correct image path
+        backgroundImage:
+        `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${import.meta.env.BASE_URL}images/background_black.jpg)`,
         backgroundSize: 'fill', // Makes the image cover the entire screen
         backgroundPosition: 'center', // Ensures the image is centered
         backgroundAttachment: 'fixed', // Keeps the image fixed while scrolling

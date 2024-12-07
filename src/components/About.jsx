@@ -12,7 +12,8 @@ const About = () => {
       id="about"
       className="bg-cover bg-center min-h-screen bg-fixed py-20 px-6 flex flex-col items-center justify-center"
       style={{
-        backgroundImage: 'url(./images/background_black.jpg)', 
+        backgroundImage:
+        `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${import.meta.env.BASE_URL}images/background_black.jpg)`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -44,7 +45,7 @@ const About = () => {
         {/* Photo of Romany Rizieq */}
         <div className="w-full lg:w-1/2 flex justify-center">
         <img
-          src="./images/romany-rizieq.jpg" // Ensure the path is correct
+          src={import.meta.env.BASE_URL+"./images/romany-rizieq.jpg"}
           alt="Romany Rizieq"
           className="w-3/4 h-auto lg:w-96 lg:h-100 object-cover rounded-lg border-4 border-black shadow-2xl transform transition-all duration-500 hover:scale-110 hover:rotate-6"
         />
