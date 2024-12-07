@@ -25,9 +25,21 @@ const App = () => {
         {/* Main Content */}
         <div className="flex-grow">
           <Routes>
-            {/* Home Route - Display all sections together */}
+            {/* Home Routes - Display all sections together */}
             <Route
               path="/"
+              element={
+                <div>
+                  <Home />
+                  <About />
+                  <Experience />
+                  <Projects />
+                  <Contact />
+                </div>
+              }
+            />
+            <Route
+              path="/home"
               element={
                 <div>
                   <Home />
