@@ -17,28 +17,16 @@ import './index.css'; // Ensure Tailwind CSS is imported
 
 const App = () => {
   return (
-    <Router>
+    <Router basename='/tothepoint_login'>
       <div className="flex flex-col min-h-screen">
         {/* Header Section */}
         <div>
           <Header />
-          <Route
-              path=""
-              element={
-                <div>
-                  <Home />
-                  <About />
-                  <Experience />
-                  <Projects />
-                  <Contact />
-                </div>
-              }
-            />
         </div>
 
         {/* Main Content */}
         <div className="flex-grow">
-          <Routes>
+          
             <Route
               path=""
               element={
@@ -70,7 +58,7 @@ const App = () => {
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
-          </Routes>
+          
         </div>
 
         {/* Footer Section */}
