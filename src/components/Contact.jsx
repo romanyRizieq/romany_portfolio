@@ -1,4 +1,4 @@
-/** 
+/**
  * @copyright 2024 Romany
  * @license Apache-2.0
  */
@@ -34,14 +34,14 @@ const Contact = () => {
     const user_email = formData.get("email");
     const user_phone = formData.get("phone");
     const user_reason = form.current.querySelector("#user_reason").selectedOptions[0].text;
-    const user_message = formData.get("message");
+    const user_message = formData.get("message"); // Ensure the textarea is properly captured
 
     const templateParams = {
       user_name,
       user_email,
       user_phone,
       user_reason,
-      user_message,
+      user_message, // Properly included in the template parameters
       current_time: currentTime,
     };
 
@@ -73,8 +73,7 @@ const Contact = () => {
       id="contact"
       className="bg-cover bg-center min-h-screen bg-fixed py-20 px-6 flex flex-col items-center justify-center"
       style={{
-        backgroundImage:
-        `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${import.meta.env.BASE_URL}images/background_black.jpg)`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${import.meta.env.BASE_URL}images/background_black.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -110,7 +109,7 @@ const Contact = () => {
             <textarea name="message" id="user_message" required></textarea>
             <input type="submit" value="Send Message" className="submit-button" />
             <img
-              src={import.meta.env.BASE_URL+"./images/4202011_email_gmail_mail_logo_social_icon.png"}
+              src={import.meta.env.BASE_URL + "images/4202011_email_gmail_mail_logo_social_icon.png"}
               alt="Gmail Logo"
               className="mx-auto w-20 h-20 mb-4 cursor-pointer"
             />

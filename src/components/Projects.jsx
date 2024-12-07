@@ -11,21 +11,21 @@ const projectsData = [
     id: 1,
     title: "Graduation Project: Urban Air Mobility (eVTOL) ",
     description: "•	Designed and developed an electric vertical takeoff and landing (eVTOL) vehicle using SolidWorks, focusing on weight optimization and system integration.<br>•	Engineered an 8-motor propulsion system with battery, ESC, and control connections.<br>•	Configured ArduCopter for optimized flight performance and autonomous operation.",
-    imageUrl: `url(${import.meta.env.BASE_URL}./images/uav.png`, // Path to your project image
+    imageUrl: `url(${import.meta.env.BASE_URL}images/uav.png`, // Path to your project image
     projectLink: "https://github.com/romanyRizieq/UAM-eVTOL-.git", // Link to GitHub or live demo
   },
   {
     id: 2,
     title: "Design of Axial Compressor and Turbine",
     description: "Designed an axial compressor using NACA 65 airfoil and a turbine with a desired Mach number, achieving 87% efficiency.",
-    imageUrl: `url(${import.meta.env.BASE_URL}/images/turbine.png`, // Path to your project image
+    imageUrl: `url(${import.meta.env.BASE_URL}images/turbine.png`, // Path to your project image
     projectLink: "https://www.youtube.com/watch?v=6TIex4nyz7c", // Link to GitHub or live demo
   },
   {
     id: 3,
     title: "Embedded Systems for UAV Control",
     description: "•	Built UAV control systems using ATmega32 microcontrollers:	<br>•	Obstacle Avoidance System: Integrated ultrasonic sensors for navigation safety.<br>•	Stabilization System: Developed temperature-controlled fan mechanisms for UAV cooling.<br>•	Secure UAV Access System: Designed secure access protocols using keypads and LCDs.",
-    imageUrl: `url(${import.meta.env.BASE_URL}/images/embedded-system-micro.jpg`, // Path to your project image
+    imageUrl: `url(${import.meta.env.BASE_URL}images/embedded-system-micro.jpg`, // Path to your project image
     projectLink: "https://github.com/romanyRizieq/Embedded-Projects.git", // Link to GitHub or live demo
   },
 ];

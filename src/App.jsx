@@ -1,7 +1,7 @@
-/** 
-* @copyright 2024 Romany Rizieq 
-* @license Apache-2.0 
-*/
+/**
+ * @copyright 2024 Romany
+ * @license Apache-2.0
+ */
 
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
@@ -21,26 +21,27 @@ const App = () => {
       <div className="flex flex-col min-h-screen">
         {/* Header Section */}
         <div>
-        <Header />
-
+          <Header />
         </div>
 
         {/* Main Content */}
         <div className="flex-grow">
           <Routes>
-          <Route
-          path=""
-          element={
-            <div>
-              <Home />
-              <About />
-              <Experience />
-              <Projects />
-              <Contact />
-            </div>
-          }
-        />
-            {/* Home Route - Display all sections together */}
+            {/* Default Route (Home Page) */}
+            <Route
+              path="/"
+              element={
+                <div>
+                  <Home />
+                  <About />
+                  <Experience />
+                  <Projects />
+                  <Contact />
+                </div>
+              }
+            />
+
+            {/* Home Route - Duplicate for '/home' */}
             <Route
               path="/home"
               element={
@@ -54,7 +55,7 @@ const App = () => {
               }
             />
             
-            {/* Other Routes - Display specific page */}
+            {/* Other Routes - Display specific pages */}
             <Route path="/about" element={<About />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />

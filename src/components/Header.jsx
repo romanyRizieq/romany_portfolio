@@ -39,8 +39,8 @@ const Header = () => {
 
         {/* Logo and name on the left */}
         <div className="flex items-center justify-start space-x-2">
-          <a
-            to={import.meta.env.BASE_URL+"/home"}
+          <NavLink
+            to="/home"
             className="flex items-center space-x-2 p-2 rounded-full hover:bg-blue-500 hover:bg-gradient-to-r from-blue-500 to-purple-600 px-3 py-1 transition-all transform hover:scale-110 cursor-pointer"
           >
             {/* Logo image */}
@@ -53,7 +53,7 @@ const Header = () => {
             <span className="text-xl font-bold text-gray-200 hover:bg-gradient-to-r from-blue-500 to-purple-600">
               Romany Rizieq
             </span>
-          </a>
+          </NavLink>
         </div>
 
         {/* Calling Icon */}
