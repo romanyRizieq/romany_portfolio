@@ -1,7 +1,7 @@
 /** 
-* @copyright 2024 Romany Rizieq 
-* @license Apache-2.0 
-*/
+ * @copyright 2024 Romany Rizieq 
+ * @license Apache-2.0 
+ */
 
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
@@ -17,31 +17,17 @@ import './index.css'; // Ensure Tailwind CSS is imported
 
 const App = () => {
   return (
-    <Router basename='/tothepoint_login'>
+    <Router basename="/romany_portfolio">
       <div className="flex flex-col min-h-screen">
         {/* Header Section */}
-        <div>
-          <Header />
-        </div>
+        <Header />
 
         {/* Main Content */}
         <div className="flex-grow">
-          
-            <Route
-              path=""
-              element={
-                <div>
-                  <Home />
-                  <About />
-                  <Experience />
-                  <Projects />
-                  <Contact />
-                </div>
-              }
-            />
+          <Routes>
             {/* Home Route - Display all sections together */}
             <Route
-              path="/home"
+              path="/"
               element={
                 <div>
                   <Home />
@@ -52,13 +38,12 @@ const App = () => {
                 </div>
               }
             />
-
-            {/* Other Routes - Display specific page */}
+            {/* Other Routes */}
             <Route path="/about" element={<About />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
-          
+          </Routes>
         </div>
 
         {/* Footer Section */}
