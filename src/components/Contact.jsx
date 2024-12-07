@@ -34,7 +34,7 @@ const Contact = () => {
     const user_email = formData.get("email");
     const user_phone = formData.get("phone");
     const user_reason = form.current.querySelector("#user_reason").selectedOptions[0].text;
-    const user_message = formData.get("message"); // Ensure the textarea is properly captured
+    const user_message = formData.get("#user_message");
 
     const templateParams = {
       user_name,
