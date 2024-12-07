@@ -1,0 +1,291 @@
+/* Import Tailwind CSS base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+
+/* Set a global dark theme for the website */
+body {
+  background-color: black; /* Dark background color for better readability */
+  color: #eaeaea; /* Light text color to contrast against dark background */
+  font-family: 'Arial', sans-serif; /* Default font (can be changed to custom fonts like 'Inter') */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* Improved line-height for better readability */
+}
+
+/* Ensure the footer sticks to the bottom of the page */
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100%; /* Full height for the root element */
+  display: flex;
+  flex-direction: column; /* Flex layout to ensure footer is pushed to the bottom */
+}
+
+/* Customize the scroll bar to be lighter */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2b2b2b; /* Dark gray color for the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1f1f1f; /* Dark background color for the scrollbar track */
+}
+
+/* Custom Button Styles */
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0.375rem; /* Rounded corners for buttons */
+  transition: all 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+button:hover {
+  background-color: #4a4a4a; /* Darker gray background on hover */
+}
+
+/* Responsive Design Helper Classes */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Adjust container padding for mobile screens */
+  }
+}
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem; /* Smaller font size for h1 on small screens */
+  }
+
+  .text-lg {
+    font-size: 1rem; /* Smaller font size for .text-lg on smaller devices */
+  }
+}
+
+/* Custom Utility Classes */
+
+/* Container with max-width and padding for better content layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center container horizontally */
+  padding: 0 15px; /* Avoid content sticking to the edges */
+}
+
+/* Flex Layout Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-6 {
+  gap: 1.5rem; /* Horizontal spacing between flex items */
+}
+
+.space-y-6 {
+  gap: 1.5rem; /* Vertical spacing between flex items */
+}
+
+/* Padding and Margin Utilities */
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Additional Customizations for Dark Mode (if required) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; /* Ensure dark background in dark mode */
+    color: #e0e0e0; /* Light text color in dark mode */
+  }
+}
+
+/* Custom Icon Button Styles */
+.nav-icon {
+  font-size: 1.25rem;
+  color: #eaeaea;
+  transition: color 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: #00bcd4; /* Light cyan color on hover */
+}
+
+/* Basic reset and form-specific background styles */
+/* .contact-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/images/background_black.jpg') no-repeat center ;
+} */
+
+.form-container {
+  /* background: rgba(0, 0, 0, 0.8); */
+  /* color: white; */
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+  /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); */
+}
+
+/* Form Title and Description */
+h1, p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* Label and input styling */
+label {
+  display: block;
+  margin: 1em 0 0.2em;
+}
+
+input, select, textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: #121212;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+select {
+  color: indigo;
+}
+
+option {
+  color: blue;
+  background: lavenderBlush;
+}
+
+input[type="checkbox"] {
+  display: inline;
+  width: auto;
+  color: red;
+}
+
+/* Submit button styling */
+.submit-button {
+  background-color: lightcoral;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+.submit-button:hover, .submit-button:focus {
+  background-color: lightgreen;
+}
+
+/* Responsive Design for Columns */
+.column {
+  width: 100%;
+  padding: 0.5em;
+}
+
+@media screen and (min-width: 600px) {
+  .column {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+  }
+
+  .column:last-child {
+    margin-right: 0;
+  }
+
+  form:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
