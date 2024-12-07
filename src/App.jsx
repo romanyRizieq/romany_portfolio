@@ -21,29 +21,36 @@ const App = () => {
       <div className="flex flex-col min-h-screen">
         {/* Header Section */}
         <div>
-        <Header />
-        <Home />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
+          <Header />
+          <Route
+              path=""
+              element={
+                <div>
+                  <Home />
+                  <About />
+                  <Experience />
+                  <Projects />
+                  <Contact />
+                </div>
+              }
+            />
         </div>
 
         {/* Main Content */}
         <div className="flex-grow">
           <Routes>
-          <Route
-          path=""
-          element={
-            <div>
-              <Home />
-              <About />
-              <Experience />
-              <Projects />
-              <Contact />
-            </div>
-          }
-        />
+            <Route
+              path=""
+              element={
+                <div>
+                  <Home />
+                  <About />
+                  <Experience />
+                  <Projects />
+                  <Contact />
+                </div>
+              }
+            />
             {/* Home Route - Display all sections together */}
             <Route
               path="/home"
@@ -57,7 +64,7 @@ const App = () => {
                 </div>
               }
             />
-            
+
             {/* Other Routes - Display specific page */}
             <Route path="/about" element={<About />} />
             <Route path="/experience" element={<Experience />} />
