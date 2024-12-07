@@ -18,7 +18,12 @@ const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement); 
 root.render(
   <React.StrictMode>
-    <App />
+  <BrowserRouter basename={import.meta.env.BASE_URL}>
+  <Routes>
+  <Route path="*" element ={<App />} />
+  </Routes>
+  </BrowserRouter>
+    
   </React.StrictMode>
 );
 
