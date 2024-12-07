@@ -1,6 +1,6 @@
-/** 
- * @copyright 2024 Romany Rizieq 
- * @license Apache-2.0 
+/**
+ * @copyright 2024 Romany
+ * @license Apache-2.0
  */
 
 // eslint-disable-next-line no-unused-vars
@@ -16,8 +16,12 @@ import Footer from './components/Footer';
 import './index.css'; // Ensure Tailwind CSS is imported
 
 const App = () => {
+  // Dynamically set basename based on deployment environment
+  const basename =
+    import.meta.env.MODE === 'development' ? '/' : '/romany_portfolio';
+
   return (
-    <Router basename="/romany_portfolio">
+    <Router basename={basename}>
       <div className="flex flex-col min-h-screen">
         {/* Header Section */}
         <Header />
