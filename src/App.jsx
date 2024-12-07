@@ -1,23 +1,8 @@
-/** 
- * @copyright 2024 Romany Rizieq 
- * @license Apache-2.0 
- */
-
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import './index.css'; // Ensure Tailwind CSS is imported
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <Router basename="/romany_portfolio">
+    <Router>
       <div className="flex flex-col min-h-screen">
         {/* Header Section */}
         <Header />
