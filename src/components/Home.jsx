@@ -11,7 +11,7 @@ const Home = () => {
       className="relative h-screen bg-cover bg-center bg-fixed text-white flex items-center justify-center"
       style={{
         backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/background_black.jpg)', // Updated path
+          `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${import.meta.env.BASE_URL}images/background_black.jpg)`, // Updated path
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -21,7 +21,7 @@ const Home = () => {
         {/* Profile Picture */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
-            src={import.meta.env.BASE_URL+"./images/Romany Rizieq (Home).JPEG"} // Updated path
+            src={import.meta.env.BASE_URL+"./images/Romany Rizieq (Home).jpeg"} // Updated path
             alt="Romany Rizieq"
             className="w-3/4 max-w-xs sm:max-w-sm lg:w-80 h-auto rounded-3xl border-4 border-black shadow-2xl transform transition-transform duration-500 hover:scale-110"
           />
