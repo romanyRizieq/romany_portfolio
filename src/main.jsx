@@ -21,9 +21,7 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
   <BrowserRouter basename={import.meta.env.BASE_URL}>
-  <Routes>
-  <Route path="*" element ={<App />} />
-  </Routes>
+  <App />
   </BrowserRouter>
     
   </React.StrictMode>
