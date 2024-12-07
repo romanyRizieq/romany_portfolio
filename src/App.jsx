@@ -29,36 +29,56 @@ const App = () => {
   }, [navigate]);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Header Section */}
-      <Header />
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        {/* Header Section */}
+        <div>
+          <Header />
+        </div>
 
-      {/* Main Content */}
-      <div className="flex-grow">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div>
-                <Home />
-                <About />
-                <Experience />
-                <Projects />
-                <Contact />
-              </div>
-            }
-          />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        {/* Main Content */}
+        <div className="flex-grow">
+          <Routes>
+            {/* Default Route (Home Page) */}
+            <Route
+              path="/"
+              element={
+                <div>
+                  <Home />
+                  <About />
+                  <Experience />
+                  <Projects />
+                  <Contact />
+                </div>
+              }
+            />
+
+            {/* Home Route - Duplicate for '/home' */}
+            <Route
+              path="/home"
+              element={
+                <div>
+                  <Home />
+                  <About />
+                  <Experience />
+                  <Projects />
+                  <Contact />
+                </div>
+              }
+            />
+            
+            {/* Other Routes - Display specific pages */}
+            <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+
+        {/* Footer Section */}
+        <Footer />
       </div>
-
-      {/* Footer Section */}
-      <Footer />
-    </div>
+    </Router>
   );
 };
 
