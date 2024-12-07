@@ -42,7 +42,7 @@ const App = () => {
         />
             {/* Home Route - Display all sections together */}
             <Route
-              path="/Home"
+              path="/home"
               element={
                 <div>
                   <Home />
