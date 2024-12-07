@@ -1,11 +1,11 @@
-/**
- * @copyright 2024 Romany
- * @license Apache-2.0
- */
+/** 
+* @copyright 2024 Romany Rizieq 
+* @license Apache-2.0 
+*/
 
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -16,12 +16,8 @@ import Footer from './components/Footer';
 import './index.css'; // Ensure Tailwind CSS is imported
 
 const App = () => {
-  // Dynamically set basename for production deployment
-  const basename =
-    import.meta.env.MODE === 'development' ? '/' : '/romany_portfolio';
-
   return (
-    <Router basename={basename}>
+    <Router basename='/romany_portfolio'>
       <div className="flex flex-col min-h-screen">
         {/* Header Section */}
         <Header />
