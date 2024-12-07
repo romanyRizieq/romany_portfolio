@@ -22,7 +22,11 @@ const App = () => {
         {/* Header Section */}
         <div>
         <Header />
-
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
         </div>
 
         {/* Main Content */}
