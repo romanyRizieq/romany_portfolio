@@ -1,6 +1,6 @@
-/**
- * @copyright 2024 Romany
- * @license Apache-2.0
+/** 
+ * @copyright 2024 Romany Rizieq 
+ * @license Apache-2.0 
  */
 
 // eslint-disable-next-line no-unused-vars
