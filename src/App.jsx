@@ -18,7 +18,7 @@ import './index.css'; // Ensure Tailwind CSS is imported
 const App = () => {
   // Dynamically set basename based on deployment environment
   const basename =
-    import.meta.env.MODE === 'development' ? '/' : '/romany_portfolio';
+    import.meta.env.MODE === 'development' ? '/' : '/romany_portfolio/';
 
   return (
     <Router basename={basename}>
